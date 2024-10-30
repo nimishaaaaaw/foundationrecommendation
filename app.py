@@ -33,7 +33,24 @@ if st.button("Recommend"):
     else:
         st.write("Sorry, no foundations found matching your preferences. Try adjusting the filters.")
 
-st.image('images/64f61761-3476-48c1-8664-aa15b09be558.webp', use_column_width=True)
+<style>
+    body {
+        background-image: url('images/64f61761-3476-48c1-8664-aa15b09be558.webp');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .stButton>button {
+        background-color: #ffcccb;
+    }
+    .stDataFrame {
+        font-size: large;
+    }
+</style>
+""", unsafe_allow_html=True)
 # Additional Styling
 st.markdown("""
 <style>
