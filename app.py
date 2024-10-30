@@ -1,10 +1,10 @@
 import streamlit as st
 import pandas as pd
 
-# Load Dataset with relative path
-df = pd.read_csv("foundation_dataset.csv", encoding="ISO-8859-1")
+# Load Dataset with specified encoding and clean price column
+df = pd.read_csv(r"C:\Users\Nimisha Majgawali\Desktop\foundationrecommendation\foundation_dataset.csv", encoding="ISO-8859-1")
 
-# Clean the 'Price (INR)' column
+# Clean the 'Price (INR)' column by removing non-numeric characters and converting to integer
 df['Price (INR)'] = df['Price (INR)'].replace('[^0-9]', '', regex=True).astype(int)
 
 # App Layout
@@ -33,45 +33,21 @@ if st.button("Recommend"):
     else:
         st.write("Sorry, no foundations found matching your preferences. Try adjusting the filters.")
 
-<style>
-    body {
-        background-image: url('images/64f61761-3476-48c1-8664-aa15b09be558.webp');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        height: 100vh;
-        margin: 0;
-    }
-    .stButton>button {
-        background-color: #ffcccb;
-    }
-    .stDataFrame {
-        font-size: large;
-    }
-</style>
-""", unsafe_allow_html=True)
 # Additional Styling
 st.markdown("""
 <style>
+    .stButton>button { background-color: #ffcccb; }
+    .stDataFrame { font-size: large; }
     body {
-        background-image: url('images/64f61761-3476-48c1-8664-aa15b09be558.webp');
+        background-image: url("C:/Users/Nimisha Majgawali/Desktop/foundationrecommendation/images/64f61761-3476-48c1-8664-aa15b09be558.webp");
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-position: center;
+        background-position: center;  
         height: 100vh; 
         margin: 0;
-    }
-    .stButton > button {
-        background-color: #ffcccb;
-    }
-    .stDataFrame {
-        font-size: large;
+        background-color: #f0f0f0;
     }
 </style>
 """, unsafe_allow_html=True)
 
-
-
-   
