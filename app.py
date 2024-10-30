@@ -13,8 +13,8 @@ st.markdown("Find the best foundation tailored to your skin type, preferred fini
 
 # Sidebar Filters
 skin_type = st.selectbox("Choose your skin type:", options=["Select your skin type", "Oily", "Dry", "Normal", "Combination"])
-finish = st.selectbox("Select your preferred finish:", options=["Select your finish", "Matte", "Dewy", "Natural"])
-coverage = st.selectbox("Desired coverage:", options=["Select your coverage", "Low", "Medium", "Full"])
+finish = st.selectbox("Select your preferred finish:", options=["Select desired finish", "Matte", "Dewy", "Natural"])
+coverage = st.selectbox("Desired coverage:", options=["Select desired coverage", "Low", "Medium", "Full"])
 price = st.slider("Set your price range (₹):", 100, 10000, step=100)
 
 # Filter data based on user selections
