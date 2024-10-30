@@ -1,10 +1,10 @@
 import streamlit as st
 import pandas as pd
 
-# Load Dataset with specified encoding and clean price column
-df = pd.read_csv(r"C:\Users\Nimisha Majgawali\Desktop\foundationrecommendation\foundation_dataset.csv", encoding="ISO-8859-1")
+# Load Dataset with relative path
+df = pd.read_csv("foundation_dataset.csv", encoding="ISO-8859-1")
 
-# Clean the 'Price (INR)' column by removing non-numeric characters and converting to integer
+# Clean the 'Price (INR)' column
 df['Price (INR)'] = df['Price (INR)'].replace('[^0-9]', '', regex=True).astype(int)
 
 # App Layout
@@ -39,15 +39,18 @@ st.markdown("""
     .stButton>button { background-color: #ffcccb; }
     .stDataFrame { font-size: large; }
     body {
-        background-image: url("C:/Users/Nimisha Majgawali/Desktop/foundationrecommendation/images/64f61761-3476-48c1-8664-aa15b09be558.webp");
+        background-image: url("images/64f61761-3476-48c1-8664-aa15b09be558.webp");
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: center;  
         height: 100vh; 
         margin: 0;
-        background-color: #f0f0f0;
+        background-color: #f0f0f0; /* Fallback color */
     }
 </style>
 """, unsafe_allow_html=True)
 
+
+
+   
