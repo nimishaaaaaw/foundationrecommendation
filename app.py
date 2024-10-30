@@ -54,17 +54,20 @@ if st.button("Recommend"):
 # Additional Styling
 st.markdown("""
 <style>
-    .stButton>button { background-color: #ffcccb; }
-    .stDataFrame { font-size: large; }
     body {
-        background-image: url("images/64f61761-3476-48c1-8664-aa15b09be558.webp");
+        background-image: url('images/64f61761-3476-48c1-8664-aa15b09be558.webp');
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-position: center;  
+        background-position: center;
         height: 100vh; 
         margin: 0;
-        background-color: #f0f0f0; /* Fallback color */
+    }
+    .stButton > button {
+        background-color: #ffcccb;
+    }
+    .stDataFrame {
+        font-size: large;
     }
 </style>
 """, unsafe_allow_html=True)
