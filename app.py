@@ -33,6 +33,7 @@ if st.button("Recommend"):
     else:
         st.write("Sorry, no foundations found matching your preferences. Try adjusting the filters.")
 
+st.image('images/64f61761-3476-48c1-8664-aa15b09be558.webp', use_column_width=True)
 # Additional Styling
 st.markdown("""
 <style>
